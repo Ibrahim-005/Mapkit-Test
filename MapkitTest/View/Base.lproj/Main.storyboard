@@ -9,27 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Map-->
         <scene sceneID="lnZ-Oq-kjK">
             <objects>
                 <viewController id="oT7-Ui-TUj" customClass="ViewController" customModule="MapkitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ezV-fT-mPl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YgT-ZK-YML">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </mapView>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uj3-kT-RE9">
-                                <rect key="frame" x="-1" y="37" width="356" height="51"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU9-rg-xVY">
-                                <rect key="frame" x="363" y="44" width="44" height="44"/>
+                                <rect key="frame" x="365" y="44" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="XDN-bC-2yo"/>
                                     <constraint firstAttribute="width" constant="44" id="m11-wi-glt"/>
@@ -42,6 +34,14 @@
                                     <action selector="searchButton:" destination="oT7-Ui-TUj" eventType="touchUpInside" id="EZB-Sb-NH8"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uj3-kT-RE9">
+                                <rect key="frame" x="9" y="41" width="356" height="51"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LJZ-3M-77h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,7 +58,7 @@
                             <constraint firstItem="vU9-rg-xVY" firstAttribute="trailing" secondItem="ezV-fT-mPl" secondAttribute="trailingMargin" id="s6J-Gf-uVy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="cDb-jH-IyN"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" selectedImage="map" id="cDb-jH-IyN"/>
                     <connections>
                         <outlet property="mapview" destination="YgT-ZK-YML" id="5ZL-9t-iAU"/>
                         <outlet property="searchBar" destination="uj3-kT-RE9" id="dUD-1S-uLM"/>
@@ -104,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZ9-mG-mVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="-167"/>
+            <point key="canvasLocation" x="699" y="51"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="q87-pQ-goY">
@@ -124,11 +124,11 @@
             </objects>
             <point key="canvasLocation" x="-1113" y="-167"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="WyI-56-YJB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6iA-6r-Ujl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mIj-CB-e51"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" selectedImage="list.dash" springLoaded="YES" id="mIj-CB-e51"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oXq-In-DYh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -141,14 +141,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMA-4r-aCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437.68115942028987" y="15.401785714285714"/>
+            <point key="canvasLocation" x="-183" y="51"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1WG-kT-UTf"/>
+        <segue reference="zwj-Nn-bNk"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

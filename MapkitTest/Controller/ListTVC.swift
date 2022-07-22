@@ -16,8 +16,6 @@ class ListTVC: UITableViewController {
         super.viewDidLoad()
     }
     
-    // MARK: - Table view data source
-    
     
     @IBAction func addCityButton(_ sender: UIBarButtonItem) {
         alertCity(title: "Add city", placeHolder: "add city what you want") { city in
@@ -27,6 +25,9 @@ class ListTVC: UITableViewController {
         }
     }
     
+    
+    
+// MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cityArray.count
@@ -48,18 +49,29 @@ class ListTVC: UITableViewController {
         self.performSegue(withIdentifier: "showmap", sender: self)
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { _ , _ , completion in
+            let editingRow = self.cityArray[indexPath.row]
+            
+            if let index = self.cityArray.firstIndex(of: editingRow){
+                self.cityArray.remove(at: index)
+            }
+            tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showmap"{
             
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            let city = cityArray[indexPath.row]
             
             let dest = segue.destination as! ViewController
-            dest.name = texts
-            if dest.name == texts {
-                
-                print("ListTVC __ \(texts)")
-            }
+            dest.name = city
+           
+           // tableView.reloadData()
         }
+       // tableView.reloadData()
     }
 }

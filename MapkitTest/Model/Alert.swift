@@ -24,7 +24,11 @@ extension UITableViewController {
             tf.placeholder = "Add city"
             tf.autocapitalizationType = .sentences
         }
+        
+        let alertCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
         alertCont.addAction(alertOk)
+        alertCont.addAction(alertCancel)
         
         present(alertCont, animated: true, completion: nil)
     }
