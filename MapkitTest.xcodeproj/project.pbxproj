@@ -16,9 +16,11 @@
 		25170EC62889BBF7005EA984 /* ListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25170EC52889BBF7005EA984 /* ListTVC.swift */; };
 		25170EC82889BC0F005EA984 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25170EC72889BC0F005EA984 /* Alert.swift */; };
 		25170ECA2889BC61005EA984 /* getCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25170EC92889BC61005EA984 /* getCoordinate.swift */; };
+		EF9F8E2C7BAF155A05BA6C0B /* Pods_MapkitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105B2D4CCD92FD572360D298 /* Pods_MapkitTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		105B2D4CCD92FD572360D298 /* Pods_MapkitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapkitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25170EAB2889B649005EA984 /* MapkitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapkitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25170EAE2889B649005EA984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25170EB02889B649005EA984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		25170EC52889BBF7005EA984 /* ListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTVC.swift; sourceTree = "<group>"; };
 		25170EC72889BC0F005EA984 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		25170EC92889BC61005EA984 /* getCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCoordinate.swift; sourceTree = "<group>"; };
+		974D697E58937B7C6C82491B /* Pods-MapkitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapkitTest.release.xcconfig"; path = "Target Support Files/Pods-MapkitTest/Pods-MapkitTest.release.xcconfig"; sourceTree = "<group>"; };
+		E02BF4D225E0EE28537E1942 /* Pods-MapkitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapkitTest.debug.xcconfig"; path = "Target Support Files/Pods-MapkitTest/Pods-MapkitTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9F8E2C7BAF155A05BA6C0B /* Pods_MapkitTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				25170EAD2889B649005EA984 /* MapkitTest */,
 				25170EAC2889B649005EA984 /* Products */,
+				B2C7CD4D3449AF9EF9F12281 /* Pods */,
+				E347953FD56A4DD4F2837D10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B2C7CD4D3449AF9EF9F12281 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E02BF4D225E0EE28537E1942 /* Pods-MapkitTest.debug.xcconfig */,
+				974D697E58937B7C6C82491B /* Pods-MapkitTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E347953FD56A4DD4F2837D10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				105B2D4CCD92FD572360D298 /* Pods_MapkitTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25170EBF2889B64A005EA984 /* Build configuration list for PBXNativeTarget "MapkitTest" */;
 			buildPhases = (
+				98C6B315CB189B033AE99943 /* [CP] Check Pods Manifest.lock */,
 				25170EA72889B649005EA984 /* Sources */,
 				25170EA82889B649005EA984 /* Frameworks */,
 				25170EA92889B649005EA984 /* Resources */,
+				1CC3631437E0C1A094E282BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +191,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CC3631437E0C1A094E282BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapkitTest/Pods-MapkitTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapkitTest/Pods-MapkitTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapkitTest/Pods-MapkitTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98C6B315CB189B033AE99943 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapkitTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		25170EA72889B649005EA984 /* Sources */ = {
@@ -320,6 +388,7 @@
 		};
 		25170EC02889B64A005EA984 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02BF4D225E0EE28537E1942 /* Pods-MapkitTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -348,6 +417,7 @@
 		};
 		25170EC12889B64A005EA984 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974D697E58937B7C6C82491B /* Pods-MapkitTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

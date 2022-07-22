@@ -8,9 +8,8 @@
 import UIKit
 
 class ListTVC: UITableViewController {
-    
+  
     var cityArray = ["Doha","Paris","London","Berlin","Moscow"]
-    var texts : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,6 @@ class ListTVC: UITableViewController {
         alertCity(title: "Add city", placeHolder: "add city what you want") { city in
             self.cityArray.append(city)
             self.tableView.reloadData()
-            print(city)
         }
     }
     
@@ -45,7 +43,6 @@ class ListTVC: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        texts = cityArray[indexPath.row]
         self.performSegue(withIdentifier: "showmap", sender: self)
     }
     
@@ -70,8 +67,6 @@ class ListTVC: UITableViewController {
             let dest = segue.destination as! ViewController
             dest.name = city
            
-           // tableView.reloadData()
         }
-       // tableView.reloadData()
     }
 }
