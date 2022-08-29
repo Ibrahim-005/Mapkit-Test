@@ -2,6 +2,10 @@
 
 Project for using & practicing Mapkit , In this app you can search cities and show on Apple map , also you can add needed cities to the List with alert .
 
+__Used Tools:__ 
+UiKit ,  MapKit ... 
+
+
 __Map View:__
 
 
